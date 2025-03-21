@@ -24,9 +24,10 @@ You need to run both the frontend and backend servers. Follow these instructions
 ----------------------
 Navigate to the frontend directory and install dependencies.
 
-cd frontend
+cd ecommerce/frontend
 npm install
 npm run dev
+
 
 2. Backend Setup
 --------------------
