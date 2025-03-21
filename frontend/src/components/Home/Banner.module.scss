@@ -1,0 +1,212 @@
+.banner {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .overlay {
+
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); // Semi-transparent overlay for better text readability
+
+  }
+
+  .content {
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+    position: absolute;
+    bottom: 1rem;
+    left: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    padding: 2rem;
+
+    .textContent {
+      .logo {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+        font-weight: bolder;
+        opacity: 0.9;
+        margin: 0 0 0.5rem;
+      }
+
+      p {
+        font-size: small;
+        font-weight: 200;
+        color: rgb(234, 231, 231);
+      }
+
+      .shopNow {
+        display: inline-flex;
+        border-bottom: 1px whitesmoke solid;
+        align-items: center;
+        gap: 0.5rem;
+        color: #ede6e6;
+        padding: 0.75rem 1.5rem;
+        text-decoration: none;
+        font-size: 1rem;
+        transition: background-color 0.3s ease;
+        overflow: hidden;
+
+        &:hover {
+          color: white;
+          border-bottom: 1px white solid;
+
+
+        }
+
+        svg {
+          width: 1rem;
+          height: 1rem;
+        }
+      }
+    }
+
+    .carouselDots {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-top: 2rem;
+
+      .dot {
+        width: 8px;
+        height: 8px;
+        background-color: #fff;
+        opacity: 0.5;
+        border-radius: 50%;
+      }
+
+      .dotActive {
+        width: 8px;
+        height: 8px;
+        background-color: #ff0000;
+        opacity: 1;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  // Responsive Design
+  @media (max-width: 1024px) {
+    height: 400px; // Reduce height for tablets
+
+    .content {
+      padding: 1.5rem;
+
+      .textContent {
+        .logo {
+          font-size: 2.5rem;
+        }
+
+        h1 {
+          font-size: 2rem;
+        }
+
+        h2 {
+          font-size: 1.2rem;
+        }
+
+        .shopNow {
+          padding: 0.5rem 1.2rem;
+          font-size: 0.9rem;
+        }
+      }
+
+      .carouselDots {
+        margin-top: 1.5rem;
+
+        .dot,
+        .dotActive {
+          width: 7px;
+          height: 7px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    height: 350px; // Further reduce height for mobile
+
+    .content {
+      padding: 1rem;
+
+      .textContent {
+        .logo {
+          font-size: 2rem;
+        }
+
+        h1 {
+          font-size: 1.5rem;
+        }
+
+        h2 {
+          font-size: 1rem;
+        }
+
+        .shopNow {
+          padding: 0.5rem 1rem;
+          font-size: 0.8rem;
+        }
+      }
+
+      .carouselDots {
+        margin-top: 1rem;
+
+        .dot,
+        .dotActive {
+          width: 6px;
+          height: 6px;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 480px) {
+    height: 300px; // Smallest height for very small screens
+
+    .content {
+      padding: 0.75rem;
+
+      .textContent {
+        .logo {
+          font-size: 1.5rem;
+          margin-bottom: 0.5rem;
+        }
+
+        h1 {
+          font-size: 1.2rem;
+        }
+
+        h2 {
+          font-size: 0.9rem;
+        }
+
+        .shopNow {
+          padding: 0.4rem 0.8rem;
+          font-size: 0.7rem;
+
+          svg {
+            width: 0.8rem;
+            height: 0.8rem;
+          }
+        }
+      }
+
+      .carouselDots {
+        margin-top: 0.75rem;
+        gap: 0.3rem;
+
+        .dot,
+        .dotActive {
+          width: 5px;
+          height: 5px;
+        }
+      }
+    }
+  }
+}

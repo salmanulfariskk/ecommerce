@@ -1,0 +1,368 @@
+.footer {
+    background-color: #000;
+    color: #fff;
+    padding: 3rem 2rem;
+  
+    .footerContent {
+      display: flex;
+      justify-content: space-between;
+      gap: 2rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+  
+      .footerColumn {
+        flex: 1;
+        min-width: 200px;
+  
+        h3 {
+          font-size: 1.2rem;
+          font-weight: bold;
+          margin-bottom: 1rem;
+        }
+  
+        h4 {
+          font-size: 1rem;
+          font-weight: 500;
+          margin-bottom: 0.5rem;
+        }
+  
+        p {
+          font-size: 0.9rem;
+          color: #ccc;
+          margin-bottom: 0.5rem;
+        }
+  
+        .subscribeForm {
+          display: flex;
+          align-items: center;
+          gap: 0.5rem;
+          margin-top: 1rem;
+  
+          input {
+            padding: 0.5rem 1rem;
+            border: 1px solid #fff;
+            border-radius: 4px;
+            background: transparent;
+            color: #fff;
+            font-size: 0.9rem;
+            width: 100%;
+            max-width: 200px;
+  
+            &::placeholder {
+              color: #ccc;
+            }
+          }
+  
+          button {
+            background: transparent;
+            border: none;
+            cursor: pointer;
+            padding: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            svg {
+              width: 20px;
+              height: 20px;
+              color: #fff;
+            }
+  
+            &:hover {
+              svg {
+                color: #ff0000;
+              }
+            }
+          }
+        }
+  
+        ul {
+          list-style: none;
+          padding: 0;
+          margin: 0;
+  
+          li {
+            margin-bottom: 0.5rem;
+  
+            a {
+              color: #ccc;
+              text-decoration: none;
+              font-size: 0.9rem;
+  
+              &:hover {
+                color: #fff;
+              }
+            }
+          }
+        }
+  
+        .appLinks {
+          display: flex;
+          gap: 1rem;
+          margin-top: 1rem;
+  
+          .qrCode {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+  
+            img {
+              width: 80px;
+              height: 80px;
+              border-radius: 4px;
+            }
+          }
+  
+          .storeButtons {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+  
+            a {
+              display: block;
+  
+              img {
+                width: 120px;
+                height: 40px;
+                border-radius: 4px;
+              }
+            }
+          }
+        }
+  
+        .socialIcons {
+          display: flex;
+          gap: 1rem;
+          margin-top: 1rem;
+  
+          a {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+  
+            svg {
+              width: 20px;
+              height: 20px;
+            }
+  
+            &:hover {
+              svg {
+                color: #ff0000;
+              }
+            }
+          }
+        }
+      }
+    }
+  
+    .footerBottom {
+      text-align: center;
+      padding-top: 1rem;
+      border-top: 1px solid #333;
+  
+      p {
+        font-size: 0.9rem;
+        color: #ccc;
+        margin: 0;
+      }
+    }
+  
+    // Responsive Design
+    @media (max-width: 1024px) {
+      padding: 2rem 1.5rem;
+  
+      .footerContent {
+        gap: 1.5rem;
+  
+        .footerColumn {
+          min-width: 180px;
+  
+          h3 {
+            font-size: 1.1rem;
+          }
+  
+          h4 {
+            font-size: 0.95rem;
+          }
+  
+          p {
+            font-size: 0.85rem;
+          }
+  
+          .subscribeForm {
+            input {
+              max-width: 180px;
+              font-size: 0.85rem;
+              padding: 0.4rem 0.8rem;
+            }
+  
+            button {
+              padding: 0.4rem;
+  
+              svg {
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+  
+          ul {
+            li {
+              a {
+                font-size: 0.85rem;
+              }
+            }
+          }
+  
+          .appLinks {
+            .qrCode {
+              img {
+                width: 70px;
+                height: 70px;
+              }
+            }
+  
+            .storeButtons {
+              a {
+                img {
+                  width: 110px;
+                  height: 35px;
+                }
+              }
+            }
+          }
+  
+          .socialIcons {
+            a {
+              svg {
+                width: 18px;
+                height: 18px;
+              }
+            }
+          }
+        }
+      }
+  
+      .footerBottom {
+        p {
+          font-size: 0.85rem;
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 1.5rem 1rem;
+  
+      .footerContent {
+        flex-direction: column;
+        gap: 2rem;
+  
+        .footerColumn {
+          min-width: 100%;
+          text-align: center;
+  
+          .subscribeForm {
+            justify-content: center;
+  
+            input {
+              max-width: 100%;
+            }
+          }
+  
+          .appLinks {
+            flex-direction: column;
+            align-items: center;
+  
+            .qrCode {
+              flex-direction: row;
+              gap: 1rem;
+            }
+          }
+  
+          .socialIcons {
+            justify-content: center;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 480px) {
+      padding: 1rem 0.5rem;
+  
+      .footerContent {
+        gap: 1.5rem;
+  
+        .footerColumn {
+          h3 {
+            font-size: 1rem;
+          }
+  
+          h4 {
+            font-size: 0.9rem;
+          }
+  
+          p {
+            font-size: 0.8rem;
+          }
+  
+          .subscribeForm {
+            input {
+              font-size: 0.8rem;
+              padding: 0.3rem 0.6rem;
+            }
+  
+            button {
+              padding: 0.3rem;
+  
+              svg {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+  
+          ul {
+            li {
+              a {
+                font-size: 0.8rem;
+              }
+            }
+          }
+  
+          .appLinks {
+            .qrCode {
+              img {
+                width: 60px;
+                height: 60px;
+              }
+            }
+  
+            .storeButtons {
+              a {
+                img {
+                  width: 100px;
+                  height: 30px;
+                }
+              }
+            }
+          }
+  
+          .socialIcons {
+            a {
+              svg {
+                width: 16px;
+                height: 16px;
+              }
+            }
+          }
+        }
+      }
+  
+      .footerBottom {
+        p {
+          font-size: 0.8rem;
+        }
+      }
+    }
+  }

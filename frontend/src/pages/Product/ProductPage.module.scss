@@ -1,0 +1,396 @@
+.productsPage {
+    background-color: #fff;
+    min-height: 100vh;
+  
+    .productsSection {
+      margin: 3rem;
+
+  
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+  
+        h1 {
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+  
+        .addProductButton {
+          background: transparent;
+          border: 1px solid #000;
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          cursor: pointer;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #f5f5f5;
+          }
+        }
+      }
+  
+      .productItems {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+  
+        .productItem {
+          position: relative;
+  
+          .deleteButton {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+  
+            svg {
+              width: 16px;
+              height: 16px;
+              color: red;
+            }
+  
+            &:hover {
+              background: #f5f5f5;
+            }
+          }
+          .editButton {
+            position: absolute;
+            top: 50px;
+            right: 10px;
+            background: #fff;
+            border: none;
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            z-index: 10;
+  
+            svg {
+              width: 16px;
+              height: 16px;
+              color: green;
+            }
+  
+            &:hover {
+              background: #f5f5f5;
+            }
+          }
+        }
+      }
+    }
+  
+    .justForYouSection {
+      padding: 2rem 0;
+  
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 2rem;
+  
+        .titleWrapper {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+  
+          .indicator {
+            width: 20px;
+            height: 40px;
+            background-color: #ff0000;
+            border-radius: 4px;
+          }
+  
+          h2 {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ff0000;
+          }
+        }
+  
+        .seeAllButton {
+          background: transparent;
+          border: 1px solid #000;
+          padding: 0.5rem 1rem;
+          font-size: 1rem;
+          cursor: pointer;
+          border-radius: 4px;
+          transition: background-color 0.3s ease;
+  
+          &:hover {
+            background-color: #f5f5f5;
+          }
+        }
+      }
+  
+      .justForYouItems {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1.5rem;
+      }
+    }
+  
+    .modal {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 1000;
+  
+      .modalContent {
+        background: #fff;
+        padding: 2rem;
+        border-radius: 8px;
+        max-width: 500px;
+        width: 90%;
+        position: relative;
+        text-align: center;
+  
+        .closeButton {
+          position: absolute;
+          top: 10px;
+          right: 10px;
+          background: transparent;
+          border: none;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+  
+        h2 {
+          font-size: 1.5rem;
+          margin-bottom: 1rem;
+        }
+  
+        .modalImage {
+          width: 100%;
+          max-width: 300px;
+          height: auto;
+          margin-bottom: 1rem;
+        }
+  
+        p {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+  
+          .originalPrice {
+            text-decoration: line-through;
+            color: #666;
+          }
+        }
+      }
+    }
+  
+    // Responsive Design
+    @media (max-width: 1024px) {
+      padding: 1.5rem;
+  
+      .productsSection,
+      .justForYouSection {
+        .productItems,
+        .justForYouItems {
+          grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+          gap: 1rem;
+        }
+  
+        .header {
+          .titleWrapper {
+            .indicator {
+              width: 15px;
+              height: 30px;
+            }
+  
+            h2 {
+              font-size: 1rem;
+            }
+          }
+  
+          .addProductButton,
+          .seeAllButton {
+            padding: 0.4rem 0.8rem;
+            font-size: 0.9rem;
+          }
+        }
+      }
+  
+      .modal {
+        .modalContent {
+          padding: 1.5rem;
+          max-width: 400px;
+  
+          h2 {
+            font-size: 1.3rem;
+          }
+  
+          .modalImage {
+            max-width: 250px;
+          }
+  
+          p {
+            font-size: 0.9rem;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 768px) {
+      padding: 1rem;
+  
+      .productsSection,
+      .justForYouSection {
+        .productItems,
+        .justForYouItems {
+          grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+          gap: 0.75rem;
+        }
+  
+        .header {
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 1rem;
+  
+          h1 {
+            font-size: 1.2rem;
+          }
+  
+          .titleWrapper {
+            .indicator {
+              width: 10px;
+              height: 25px;
+            }
+  
+            h2 {
+              font-size: 0.9rem;
+            }
+          }
+  
+          .addProductButton,
+          .seeAllButton {
+            padding: 0.3rem 0.6rem;
+            font-size: 0.8rem;
+          }
+        }
+      }
+  
+      .modal {
+        .modalContent {
+          padding: 1rem;
+          max-width: 350px;
+  
+          h2 {
+            font-size: 1.2rem;
+          }
+  
+          .modalImage {
+            max-width: 200px;
+          }
+  
+          p {
+            font-size: 0.85rem;
+          }
+        }
+      }
+    }
+  
+    @media (max-width: 480px) {
+      padding: 0.5rem;
+  
+      .productsSection,
+      .justForYouSection {
+        .productItems,
+        .justForYouItems {
+          grid-template-columns: 1fr;
+          gap: 0.5rem;
+        }
+  
+        .header {
+          h1 {
+            font-size: 1rem;
+          }
+  
+          .titleWrapper {
+            .indicator {
+              width: 8px;
+              height: 20px;
+            }
+  
+            h2 {
+              font-size: 0.8rem;
+            }
+          }
+  
+          .addProductButton,
+          .seeAllButton {
+            padding: 0.2rem 0.5rem;
+            font-size: 0.7rem;
+          }
+        }
+      }
+  
+      .modal {
+        .modalContent {
+          padding: 0.75rem;
+          max-width: 300px;
+  
+          h2 {
+            font-size: 1rem;
+          }
+  
+          .modalImage {
+            max-width: 150px;
+          }
+  
+          p {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .spinner-container {
+    width:100%;
+    height:100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+  }
+  
+  .spinner {
+    width: 40px;
+    height: 40px;
+    margin: auto;
+    margin-top:20%;
+    border: 4px solid rgba(0, 0, 0, 0.1);
+    border-top-color:black;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    to {
+      transform: rotate(360deg);
+    }
+  }
+  
